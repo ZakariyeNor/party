@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
+    # Third-party
+    'django_browser_reload',
+    
     # Local
     'party',
 ]
@@ -46,6 +49,8 @@ INSTALLED_APPS = [
 AUTH_USER_MODEL = "party.CustomUser"
 
 MIDDLEWARE = [
+    # For reload page
+    'django_browser_reload.middleware.BrowserReloadMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
