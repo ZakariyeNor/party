@@ -40,10 +40,15 @@ INSTALLED_APPS = [
     
     # Third-party
     'django_browser_reload',
+    "crispy_forms",
+    "crispy_bootstrap4",
     
     # Local
     'party',
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 # Custom user model
 AUTH_USER_MODEL = "party.CustomUser"
